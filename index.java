@@ -169,5 +169,160 @@ public class tutorial1 {
 		System.out.println("The Mortgage per Month is : " + mortgageFormatted);
 		
 		scanner1.close();
-	}
+		
+		
+		// = -> assignment operator
+		// == -> equality operator
+		
+		
+		// Logical Operator 
+		// A Programme for Passing a Loan
+		boolean hasHighIncome = true;
+		boolean hasGoodCredit = true;
+		boolean hasCriminalRecord = false;
+		
+		boolean isEligible = (hasHighIncome || hasGoodCredit) && !hasCriminalRecord;
+		System.out.println(isEligible);
+		
+		
+		
+		// Conditional Statements 
+		
+		int temp = 35;
+		
+		if(temp > 30) {
+			System.out.println("Its a Hot day\nDrink water");
+		}else if(temp > 20) {   // temp should be between 20 - 30
+			System.out.println("Beautiful Day");
+		}else {
+			System.out.println("Cold Day");
+		}
+		
+		// Simplifying if statements
+		int income = 120_000;
+		boolean highIncome = (income > 100_000); // it will evaluates the output in T/F
+		System.out.println(highIncome);
+		
+		// Ternary Operator (One Liner if-else)
+		String res = income > 100_000 ? "First" : "Economy";  // income > 100000 if(?) print First else (:) Economy 
+		System.out.println(res);
+		
+		
+		// Switch Statements
+		String role = "admin";
+		
+		switch(role) {
+		case "admin" : 
+			System.out.println("You are an Admin");
+			break;
+		case "moderator": 
+			System.out.println("You are Moderator");
+			break;
+		default:
+			System.out.println("You are a Guest");
+		}
+		
+		// FizzBuzz Programme
+//		
+//		Scanner scanner1 = new Scanner(System.in);
+//		
+//		System.out.print("Enter the Number: ");
+//		int input = scanner1.nextInt();
+//		
+//		if(input % 5 == 0 && input % 3 == 0) {
+//			System.out.println("FizzBuzz");
+//		} else if(input % 3 == 0) {
+//			System.out.println("Fizz");
+//		}else if(input % 5 == 0) {
+//			System.out.println("Buzz");
+//		}else {
+//			System.out.println(input);
+//		}
+//		
+		
+		// FOR LOOPS 
+//		for (statement 1; statement 2; statement 3) {
+//			  // code block to be executed
+//			}
+//		
+//		Statement 1 sets a variable before the loop starts (let i = 0).
+//
+//		Statement 2 defines the condition for the loop to run (i must be less than 5).
+//
+//		Statement 3 increases a value (i++) each time the code block in the loop has been executed.
+		
+		for (int i = 0; i < 5; i++) {         // Incrementing loop
+			System.out.println("Hello World " + i);
+		}
+		
+		for(int i = 5; i > 0; i--) {          // Decrementin loop
+			System.out.println("Hello World " + i);
+		}
+		
+		
+		// While Loop
+		// Programme which run over and over until User Enters "quit"
+		Scanner sc3 = new Scanner(System.in);
+		String input1 = ""; // initially empty String
+		
+		while(!input1.equals("quit")) {
+			System.out.print("Input: ");
+			input1 = sc3.next().toLowerCase();
+			System.out.println(input1);
+		}
+		sc3.close();
+		
+		
+		// Do - While Loops -> in do-while Loops, condition is always checked at Last
+		// and do-while loops run atleast once
+		do {
+			System.out.print("Input: ");
+			input1 = sc3.next().toLowerCase();
+			System.out.println(input1);
+		}while(!input1.equals("quit"));
+		
+		
+		// For Each Loop -> it is used to iterate over Arrays or Collections
+		// it will iterate to forward only!!
+		String[] fruits = {"Apple", "Mango", "Orange"};
+		
+		for(String fruit: fruits) {
+			System.out.println(fruit);
+		}
+		
+		// Mortgage Calculator Programme with Error Handling 
+//		Scanner scanner1 = new Scanner(System.in);
+//		int principal = 0;
+//		while(true) {
+//			System.out.print("Principal: ");
+//			principal = scanner1.nextInt();
+//			if(principal > 1000 && principal <= 1_000_000) {
+//				break;
+//			System.out.println("Invalid Value");
+//		}
+//		}
+//	
+//		float monthlyInterest = 0;
+//		float annualInterest = 0;
+//		while(true) {
+//			System.out.print("Rate of Interest: ");
+//			annualInterest = scanner1.nextFloat();
+//			
+//			if(annualInterest > 1 && annualInterest <= 30) {
+//				monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+//				break;
+//				System.out.println("Enter a Value Between 1 and 30");
+//		}
+//		}
+//		byte years = 0;
+//		int numberOfPayments = 0;
+//		while(true) {
+//		System.out.print("Period (Years) : ");
+//		years = scanner1.nextByte();
+//		if(years > 1 && years <= 30)
+//			numberOfPayments = years * MONTHS_IN_YEAR;
+//			break;
+//		}
+//		System.out.println("Enter a Value Between 1 and 30");
+	}	
 }
